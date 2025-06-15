@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <form method="post" th:action="@{/api/save}" th:object="${product}">
+        <h1>Enter New Employee</h1>
+        <table cellpadding="10">
+               <tr>
+                   <td>Product Name:</td>
+                   <td><input type="text"  th:field="*{product_name}"></td>
+               </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" th:field="*{price}"></td>
+            </tr>
+            <tr>
+                <td>Catogory:</td>
+                <td><input type="text" th:field="*{catogory}"></td>
+            </tr>
+
+        </table><br><br>
+          <input type="submit">
+        <a href="/api/product"><button type="button">Back</button></a>
+    </form><br>
+
+</div>
+</body>
+</html>
