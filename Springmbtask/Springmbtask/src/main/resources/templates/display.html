@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+</head>
+<body>
+<h1 align="center">Employee details</h1>
+<table border="1" cellpadding="10" align="center">
+   <thead>
+    <th>E.Id</th>
+    <th>Employee Name</th>
+    <th>Employee Email</th>
+    <th>Employee Location</th>
+   </thead>
+    <tbody>
+     <tr th:each="emp:${emp}">
+       <td th:text="${emp.id}"></td>
+       <td th:text="${emp.name}"></td>
+       <td th:text="${emp.email}"></td>
+       <td th:text="${emp.location}"></td>
+     </tr>
+    </tbody>
+</table>
+</body>
+</html>

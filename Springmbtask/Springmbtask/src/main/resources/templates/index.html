@@ -1,0 +1,27 @@
+<div align="center" xmlns:th="http://www.w3.org/1999/xhtml">
+    <h2>Enter New Employee</h2>
+    <br><br>
+    <form th:action="@{/save}" th:object="${emp}" method="post">
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Employee Id</td>
+                <td><input type="text" th:field="*{id}"></td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td><input type="text" th:field="*{name}"></td>
+            </tr>
+            <tr>
+                <td>Employee Email</td>
+                <td><input type="text" th:field="*{email}"></td>
+            </tr>
+            <tr>
+                <td>Employee Location</td>
+                <td><input type="text" th:field="*{location}"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><Button type="submit">Save</Button></td>
+            </tr>
+        </table>
+    </form>
+</div>
